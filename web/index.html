@@ -274,10 +274,8 @@
           const subject = document.getElementById('name-4c18').value;
           const message = document.getElementById('message-4c18').value;
           const successMessage = document.querySelector('.u-form-send-success');
-          const errorMessage = document.querySelector('.u-form-send-error');
       
           successMessage.style.display = 'none';
-          errorMessage.style.display = 'none';
       
           if (email && subject && message) {
             try {
@@ -291,17 +289,10 @@
       
               if (response.ok) {
                 successMessage.style.display = 'block';
-              } else {
-                errorMessage.style.display = 'block';
-                console.error('Error al enviar el correo', await response.text());
               }
             } catch (error) {
-              errorMessage.style.display = 'block';
-              console.error('Error al enviar el correo', error);
+              // No se muestra mensaje de error ni se registra en consola
             }
-          } else {
-            errorMessage.style.display = 'block';
-            alert('Por favor, completa todos los campos.');
           }
         }
       </script>
