@@ -2610,11 +2610,10 @@ a {
 .u-form-horizontal .u-form-group.u-form-submit {
   margin-right: 0;
 }
-.u-form div.u-form-send-error,
 .u-form div.u-form-send-success {
   display: none;
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 0px;
   width: 100%;
   text-align: center;
