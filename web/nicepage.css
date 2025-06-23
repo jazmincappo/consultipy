@@ -2610,10 +2610,11 @@ a {
 .u-form-horizontal .u-form-group.u-form-submit {
   margin-right: 0;
 }
+.u-form div.u-form-send-error,
 .u-form div.u-form-send-success {
   display: none;
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 0px;
   width: 100%;
   text-align: center;
@@ -44679,13 +44680,13 @@ a.u-link.u-text-hover-grey-90:hover {
         
         
         
+        /* 5 Tamaños de pantallas */
         
-        
-        --theme-sheet-width-xl: 1140px;
-        --theme-sheet-width-lg: 940px;
-        --theme-sheet-width-md: 720px;
-        --theme-sheet-width-sm: 540px;
-        --theme-sheet-width-xs: 340px;
+        --theme-sheet-width-xl: 1140px; /* pantallas grandes (escritorio) */
+        --theme-sheet-width-lg: 940px;  /* laptops */
+        --theme-sheet-width-md: 720px;  /* tablets */
+        --theme-sheet-width-sm: 540px;  /* móviles medianos */
+        --theme-sheet-width-xs: 340px;  /* móviles pequeños */
         
         
         
@@ -45107,7 +45108,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-text-1 {
   font-size: 3rem;
-  margin: -66px auto 41px 155px;
+  margin: -50px auto 41px 155px; /* margenes del texto del header*/
 }
 @media (max-width: 1199px) {
   .u-header .u-sheet-1 {
@@ -45126,7 +45127,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-text-1 {
     width: auto;
-    margin-top: -70px;
+    margin-top: -48px; /*Margen arriba del texto del header*/
     margin-bottom: 57px;
     margin-left: 139px;
   }
