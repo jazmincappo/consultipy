@@ -220,6 +220,7 @@
 }
 
 @media (max-width: 575px) {
+    /* La sección de introducción (section 1) tendrá altura fija  de 764px en celulares pequeños */
   .u-section-1 .u-sheet-1 {
     min-height: 764px;
   }
@@ -378,6 +379,8 @@
 
 .u-section-2 .u-text-6 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .u-section-2 .u-text-7 {
@@ -405,6 +408,8 @@
 
 .u-section-2 .u-text-8 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .u-section-2 .u-text-9 {
@@ -432,6 +437,8 @@
 
 .u-section-2 .u-text-10 {
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .u-section-2 .u-text-11 {
@@ -660,8 +667,6 @@
 
   .u-section-2 .u-text-6 {
     transition-duration: 0.5s;
-    font-weight: 700;
-    font-size: 1.25rem;
     margin: 20px 0 0;
   }
 
@@ -671,8 +676,6 @@
 
   .u-section-2 .u-text-8 {
     transition-duration: 0.5s;
-    font-weight: 700;
-    font-size: 1.25rem;
     margin: 20px 0 0;
   }
 
@@ -682,8 +685,6 @@
 
   .u-section-2 .u-text-10 {
     transition-duration: 0.5s;
-    font-weight: 700;
-    font-size: 1.25rem;
     margin: 20px 0 0;
   }
 
@@ -849,8 +850,9 @@
 }
 
 @media (max-width: 575px) {
+  /* La sección de funcionalidades (section 2) tendrá altura fija  de 6000px en celulares pequeños */
   .u-section-2 .u-sheet-1 {
-    min-height: 6466px;
+    min-height: 6000px;
   }
 
   .u-section-2 .u-image-1 {
@@ -1811,6 +1813,7 @@
 }
 
 @media (max-width: 575px) {
+  /* La sección de contacto (section 3) tendrá altura fija de 900px en celulares pequeños */
   .u-section-3 .u-sheet-1 {
     min-height: 900px;
   }
@@ -1849,3 +1852,219 @@
     margin-left: initial;
   }
 }
+
+
+
+
+/* Sección Kalyaan - INICIO */
+
+.kalyaan-section {
+  background-color: #263D20;
+  padding: 20px 15px; /* espacio reducido arriba y abajo */
+}
+
+/* 🟡 Base: Extra pequeño (<576px) - Móvil muy chico
+   Distribución: 1 columna, 3 filas (logo - texto - mapa)
+*/
+.kalyaan-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* una columna */
+  grid-template-rows: auto auto auto; /* tres filas */
+  gap: 10px; /* Menos espacio entre logo, texto y mapa */
+  text-align: center;
+}
+
+/* Estilos compartidos para los 3 bloques */
+.kalyaan-logo,
+.kalyaan-info,
+.kalyaan-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del logo */
+.kalyaan-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* 📝 Texto del medio */
+.kalyaan-info {
+  color: white;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.kalyaan-info h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  margin-top: 0; /* Evita que el h3 tenga margin-top y así no hay espacio entre el texto y el logo */
+}
+
+.kalyaan-info p {
+  margin: 4px 0;
+}
+
+.kalyaan-info a {
+  color: #F2B161;
+  text-decoration: none;
+}
+
+/* 🖼 Icono Instagram */
+.kalyaan-instagram {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.kalyaan-instagram img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle; /* asegura alineación con texto */
+  margin-bottom: 3px; /* borde abajo para alinear con precisión */
+}
+
+/* 🔵 Tamaño pequeño (≥576px y <768px) - Móviles más anchos
+   Mismo layout: 1 columna - 3 filas, pero se escala el logo */
+@media (min-width: 576px) and (max-width: 767px) {
+  .kalyaan-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* 🟠 Tamaño mediano (≥768px y <1024px) - Tablets
+   Distribución: 2 columnas, 2 filas:
+   Fila 1: logo | texto
+   Fila 2: mapa ocupa las dos columnas
+*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .kalyaan-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo info"
+      "map map";
+    text-align: left;
+  }
+
+  .kalyaan-logo {
+    grid-area: logo;
+    align-items: flex-end;
+  }
+
+  .kalyaan-info {
+    grid-area: info;
+    align-items: flex-start;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .kalyaan-map {
+    grid-area: map; /* Mapa ocupa dos clumnas en la fila 2 */
+  }
+
+  .kalyaan-info h3 {
+    font-size: 20px;
+  }
+
+  .kalyaan-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* 🔴 Tamaño grande (≥1024px y <1280px) - PC escritorio
+   Distribución: 3 columnas (logo | texto | mapa)
+*/
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .kalyaan-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo info map";
+    text-align: left;
+  }
+
+  .kalyaan-logo {
+    grid-area: logo;
+  }
+
+  .kalyaan-info {
+    grid-area: info;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .kalyaan-map {
+    grid-area: map; /* Mapa ocupa dos clumnas en la fila 2 */
+  }
+
+  .kalyaan-info h3 {
+    font-size: 22px;
+  }
+
+  .kalyaan-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 🟣 Tamaño extra grande (≥1280px) - Pantallas grandes
+   Igual a tamaño grande, pero se agrandan elementos y es en 1 fila 3 columnas
+*/
+@media (min-width: 1280px) {
+  .kalyaan-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo info map";
+    text-align: left;
+  }
+
+  .kalyaan-logo {
+    grid-area: logo;
+    align-items: center;
+  }
+
+  .kalyaan-info {
+    grid-area: info;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .kalyaan-info h3 {
+    font-size: 24px;
+  }
+
+  .kalyaan-map {
+    grid-area: map;
+  }
+
+  .kalyaan-img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Mapa incrustado con estilo */
+.kalyaan-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+
+/* Sección Kalyaan - FINAL */
+
+
+
+
