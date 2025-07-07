@@ -277,13 +277,120 @@
 
     <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
 
+    <section id="faq" class="u-align-center u-clearfix u-custom-color-3 u-section-faq">
+      <div class="u-clearfix u-sheet u-sheet-1">
 
+        <!-- Ícono definido una sola vez -->
+        <svg style="display: none;">
+          <symbol id="icon-flecha" viewBox="0 0 20 20">
+            <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"/>
+          </symbol>
+        </svg>
+        
+        <div class="container">
+          <h2>Preguntas Frecuentes</h2>
+          <input id="search" type="text" placeholder="Buscar..." />
+          <div id="faq-list"></div>
+        </div>
 
+        <!-- Añade justo después de <div id="faq-list"></div> -->
+        <div id="no-results" class="no-results">No hay resultados que coincidan con su búsqueda</div>
 
+        
+        <script>
+          const preguntas = [
+            ["¿Necesito crear una cuenta para usar la aplicación?", "No, las cuentas se crean solo para poder comunicarse con los doctores de la aplicación. Estos usarán tu correo para comunicarse contigo si es necesario."],
+            ["¿Cómo puedo recuperar mi contraseña si la olvidé?", "En la sección *Olvidé mi contraseña* del Inicio de Sesión se enviará un código de recuperación que deberá ingresar para verificar que usted es el propietario del correo, tendrá unos pocos intentos y si falla en todos, se volverá a mandar un código nuevo. Una vez que ingrese el código correctamente, se le habilitará la creación de una nueva contraseña."],
+            ["¿Cómo puedo eliminar mi cuenta?", "En el menú lateral izquierdo, donde se muestra su correo, hay una flechita. Tiene dos opciones: cerrar sesión y eliminar la cuenta, pero no eliminará sus registros. Para ello, debe eliminarlos manualmente uno por uno. Esto se hace en caso de que la cuenta se elimine por error para no perder sus registros. Si lo desea puede pedir al soporte técnico la eliminación de todos sus registros: consultipy@gmail.com"],
+            ["¿Cómo puedo eliminar mis registros?", "Ingrese en Detalles de su registro, y abajo verá las opciones Eliminar o Editar."],
+            ["Ya no veo o no me aparece el Inicio de Sesión", "Si iniciaste sesión anteriormente y le diste a *Recordar usuario*, es probable que ya no te aparezca el Inicio de Sesión y te lleve a tus registros directamente, para volver a ver el Inicio de Sesión debes ir al menú lateral izquierdo, hacer click en tu usuario y luego en *Ver Perfil*, al deslizar hacia abajo, desactiva la opción *Recordar usuario*. Ahora vuelve a Registros y ya te volverá a aparecer el Inicio de Sesión."],
+            ["¿Puedo usar la aplicación sin conexión a Internet?", "Para algunas funcionalidades sí, como dibujar, ver las sugerencias de juegos, establecer alarmas para los medicamentos, hacer el test, cerrar sesión y usar el botón de pánico. También puede leer las políticas y términos de uso. Para todas las funcionalidades que requieren conectarse a la base de datos sí se necesita internet, por ejemplo, para ver los sitios web de las clínicas, enviar correos, eliminar cuenta, chatbot, libros, videos, Mapa y Registros."],
+            ["¿Cómo funciona el pizarrón de Dibujar?", "El primer botón es para crear una hoja nueva (tiene el símbolo +), el segundo botón es el lápiz que sirve para dibujar, el tercer botón es para borrar los trazos, el cuarto botón sirve para guardar el dibujo en la galería del teléfono, el quinto botón es para deshacer los trazos, tanto del dibujo como del borrador, y el sexto botón es para rehacer los trazos. Abajo del todo hay 18 colores para elegir, y debajo de los colores hay diseños que se pueden usar. El primero de ellos sirve para elegir la opacidad del trazo del dibujo y hacerlo más o menos transparente."],
+            ["¿Recibo notificaciones si mi Doctor me escribe algo?", "Sí, cuando el doctor le añade una observación a su registro, usted recibe un correo electrónico indicando que ha recibido una nueva observación de su doctor en la nota del día tal. No se proporcionará información sensible a través del correo. Para revisar la nota de su doctor, deberá abrir la app y buscar por fecha la nota de la que recibió notificación, para evitar mostrar información sensible en el correo."],
+            ["¿Es segura mi información personal en la aplicación?", "Sí, los datos sensibles están encriptados y solo lo puede leer usted y el doctor que ha seleccionado de la lista. Siempre puede modificar su registro o eliminarlo con total libertad."],
+            ["¿La aplicación es gratuita?", "Sí, pero se está planteando colocar pequeños anuncios en donde no obstaculicen las funcionalidades de la app para retribuir el tiempo utilizado para programar esta aplicación y los gastos de mantenimiento (base de datos y chatbot)."],
+            ["¿Puedo usar la aplicación en varios dispositivos?", "Sí, debido a que la información se guarda en la nube, usted puede tener acceso mediante internet de su misma cuenta, en diferentes dispositivos."],
+            ["¿Cómo puedo reportar un problema técnico o un error?", "Para reportar un error, por favor escribe un correo a consultipy@gmail.com describiendo el problema y, si lo deseas, adjunta capturas de pantalla o detalles adicionales."],
+            ["¿Cómo puedo proporcionar comentarios o sugerencias?", "Para calificar la app, enviar comentarios, sugerencias, o errores en general, puede utilizar la caja de comentarios que está arriba a la derecha del Centro de Ayuda donde dice (Sugerencias). Ingrese el tema, una descripción y califique la app (opcional). Esto nos ayudará a mejorar la app."],
+            ["¿Cómo hago si necesito ayuda o quiero comunicarme con Soporte Técnico?", "En Sugerencias, eligiendo el tema: Necesito Ayuda sobre la APP. Por correo electrónico: consultipy@gmail.com. Por Instagram: consultipy_app"]
+          ];
+        
+          const contenedor = document.getElementById("faq-list");
+        
+          preguntas.forEach(([pregunta, respuesta], index) => {
+            const id = index + 1;
+            contenedor.innerHTML += `
+              <div class="faq-item">
+                <button id="faq-button-${id}" class="faq-button" onclick="toggleFaq(${id})">
+                  <span class="faq-text">${pregunta}</span>
+                  <svg id="arrow-${id}" class="faq-icon" viewBox="0 0 20 20">
+                    <use href="#icon-flecha"></use>
+                  </svg>
+                </button>
+                <div id="content-${id}" class="faq-content">
+                  <div class="faq-content-inner">${respuesta}</div>
+                </div>
+              </div>
+            `;
+          });
+        
+          function toggleFaq(id) {
+            const content = document.getElementById(`content-${id}`);
+            const arrow = document.getElementById(`arrow-${id}`);
+            const button = document.getElementById(`faq-button-${id}`);
+            const isExpanded = content.style.maxHeight && content.style.maxHeight !== "0px";
+        
+            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = null);
+            document.querySelectorAll('.faq-icon').forEach(el => el.classList.remove('rotate'));
+            document.querySelectorAll('.faq-button').forEach(el => el.classList.remove('active'));
+        
+            if (!isExpanded) {
+              content.style.maxHeight = content.scrollHeight + "px";
+              arrow.classList.add("rotate");
+              button.classList.add("active");
+            }
+          }
+        
+        
+          // Buscador palabra a palabra
+          // Guardar el contenido original de cada FAQ
+          const faqItems = Array.from(document.querySelectorAll('.faq-item')).map(item => ({
+            item,
+            originalQ: item.querySelector('.faq-text').innerHTML,
+            originalA: item.querySelector('.faq-content-inner').innerHTML
+          }));
+        
+          document.getElementById('search').addEventListener('input', e => {
+            const terms = e.target.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        
+            faqItems.forEach(({ item, originalQ, originalA }) => {
+              // Reemplazar cada término por <mark>term</mark>
+              let q = originalQ, a = originalA;
+              terms.forEach(term => {
+                const regex = new RegExp(`(${term})`, 'gi');
+                q = q.replace(regex, '<mark>$1</mark>');
+                a = a.replace(regex, '<mark>$1</mark>');
+              });
+        
+              // Actualizar el HTML de pregunta y respuesta
+              item.querySelector('.faq-text').innerHTML = q;
+              item.querySelector('.faq-content-inner').innerHTML = a;
+        
+              // Mostrar/ocultar según coincida todo término
+              const hayMatch = terms.every(term =>
+                (originalQ + originalA).toLowerCase().includes(term)
+              );
+              item.style.display = hayMatch ? "" : "none";
+            });
 
+            const anyVisible = faqItems.some(({ item }) => item.style.display !== 'none');
+            document.getElementById('no-results').style.display = anyVisible ? 'none' : 'block';
 
+          });
+        </script>
 
-
+      </div> <!-- cierra .u-sheet-1 -->
+    </section> <!-- cierra #faq -->
 
 
 
