@@ -3,50 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminación de cuenta - ConsultiPY</title>
+    <title>Eliminación de cuenta y datos - ConsultiPY</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
+            color: #555;
         }
+
         h1, h2 {
             color: #333;
         }
-        p, li {
-            color: #555;
+
+        .advertencia {
+            padding: 12px;
+            border-left: 4px solid #d32f2f;
+            background-color: #fff4f4;
+            margin: 15px 0;
+        }
+
+        .importante {
+            font-weight: bold;
+        }
+
+        a {
+            color: #0066cc;
         }
     </style>
 </head>
+
 <body>
+
     <h1>Eliminación de cuenta y datos</h1>
-    <p>Los usuarios de la app <strong>ConsultiPY</strong> pueden solicitar la eliminación de su cuenta y datos personales asociados de las siguientes formas:</p>
+
+    <p>
+        Los usuarios de <strong>ConsultiPY</strong> pueden administrar y solicitar
+        la eliminación de su cuenta y de los datos asociados a ella.
+    </p>
+
+    <p>La eliminación puede solicitarse de las siguientes formas:</p>
+
     <ul>
-        <li>Escribiendo al correo <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a> solicitando la eliminación de su cuenta y/o registros.</li>
-        <li>Desde la propia app, accediendo a <strong>Ver perfil</strong> o al menú lateral y seleccionando la opción <strong>Borrar cuenta</strong>.</li>
+        <li>
+            Desde la propia aplicación, accediendo a
+            <strong>Ver perfil → Borrar cuenta</strong>.
+        </li>
+
+        <li>
+            Escribiendo al correo de soporte
+            <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a>.
+        </li>
     </ul>
-    <p>La eliminación de la cuenta borra los datos personales del perfil, pero no los registros que el usuario haya creado. Para eliminarlos:</p>
+
+
+    <h2>Opciones de eliminación para pacientes</h2>
+
+    <p>
+        Un usuario con perfil de paciente podrá elegir qué información desea eliminar.
+        Entre las opciones disponibles podrán encontrarse:
+    </p>
+
     <ul>
-        <li>El usuario debe ingresar con su cuenta (o crearla nuevamente con el mismo correo) y eliminarlos uno a uno desde la app.</li>
-        <li>O solicitar la eliminación completa de registros escribiendo a soporte.</li>
+        <li>
+            <strong>ELIMINAR TODO:</strong> elimina la cuenta, el acceso y todos
+            los datos seleccionables asociados al usuario.
+        </li>
+
+        <li>Eliminar todos sus registros de ánimo.</li>
+
+        <li>Desvincularse de todos sus profesionales de salud asociados.</li>
+
+        <li>Eliminar únicamente su perfil de paciente.</li>
+
+        <li>
+            Solicitar una revisión adicional por parte de soporte para localizar
+            y eliminar datos específicos o referencias que el usuario desee revisar.
+        </li>
     </ul>
-    <p>Los datos eliminados incluyen: nombre, correo electrónico, contraseña de la app y registros. Los registros eliminados no serán recopilados bajo ninguna circunstancia con fines estadísticos.</p>
+
+    <p>
+        Si el usuario elimina únicamente su perfil de paciente pero conserva su cuenta,
+        podrá seguir utilizando las funciones generales de ConsultiPY que no requieren
+        un perfil de paciente o profesional.
+    </p>
+
+    <p>
+        En ese caso, su cuenta permanecerá activa pero sin rol de paciente ni de doctor.
+    </p>
+
+
+    <h2>Opciones de eliminación para doctores</h2>
+
+    <p>
+        Los profesionales registrados también podrán decidir qué información desean eliminar.
+        Entre las opciones disponibles podrán encontrarse:
+    </p>
+
+    <ul>
+        <li>
+            <strong>ELIMINAR TODO:</strong> elimina la cuenta, el acceso y todos
+            los datos seleccionables asociados al usuario.
+        </li>
+
+        <li>Dejar de aparecer como doctor dentro de ConsultiPY.</li>
+
+        <li>Eliminar sus vínculos actuales con pacientes.</li>
+
+        <li>Eliminar sus vínculos actuales con clínicas.</li>
+
+        <li>
+            Solicitar una revisión adicional por parte de soporte para localizar
+            información o referencias específicas.
+        </li>
+    </ul>
+
+    <div class="advertencia">
+        <strong>⚠ Importante para profesionales:</strong>
+        determinadas opciones de eliminación implican perder la autorización
+        otorgada por ConsultiPY para utilizar el rol de Doctor.
+        Si posteriormente desea volver a utilizar ese rol, deberá solicitar una
+        nueva autorización a través de
+        <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a>.
+    </div>
+
+
+    <h2>Conservar la cuenta sin rol</h2>
+
+    <p>
+        Un usuario puede dejar de utilizar su perfil de paciente o de doctor y,
+        al mismo tiempo, conservar su cuenta de ConsultiPY.
+    </p>
+
+    <p>
+        En este caso, la cuenta quedará sin un rol clínico asignado y podrá continuar
+        utilizando las funciones generales de la aplicación que no dependan del registro
+        de ánimo ni del acceso profesional.
+    </p>
+
+    <p>
+        Si posteriormente desea recuperar un rol de paciente o doctor utilizando esa
+        misma cuenta, deberá comunicarse con soporte para revisar su caso.
+    </p>
+
+
+    <h2>Registros históricos y observaciones profesionales</h2>
+
+    <p>
+        Si un doctor deja de utilizar ConsultiPY o elimina su perfil profesional,
+        sus vínculos futuros con pacientes y clínicas podrán ser eliminados.
+    </p>
+
+    <p>
+        Sin embargo, los registros históricos que ya pertenecen a los pacientes
+        podrán conservar la información correspondiente al profesional, la clínica
+        asociada y las observaciones profesionales que hayan sido registradas
+        anteriormente.
+    </p>
+
+    <p>
+        Esto permite conservar el contexto histórico del registro del paciente
+        aunque el profesional ya no forme parte activa de ConsultiPY.
+    </p>
+
+    <p>
+        Si el paciente o el profesional desea solicitar la eliminación de alguna
+        de estas referencias históricas, podrá hacerlo escribiendo a soporte.
+    </p>
+
+
+    <h2>Solicitud de revisión adicional</h2>
+
+    <p>
+        La opción <strong>Solicitar revisión adicional</strong> permite explicar
+        mediante un campo de texto qué información específica desea que sea revisada
+        o eliminada.
+    </p>
+
+    <p>
+        Seleccionar esta opción por sí sola no elimina automáticamente el rol del
+        usuario ni su cuenta.
+    </p>
+
+    <p>
+        El equipo de soporte revisará la solicitud y podrá informar al usuario
+        sobre la información encontrada antes de realizar eliminaciones adicionales.
+    </p>
+
+    <p>
+        No se eliminarán datos adicionales que el usuario no haya solicitado,
+        salvo que haya pedido expresamente la eliminación completa de toda su información.
+    </p>
+
+
+    <h2>Solicitudes y plazo de 48 horas</h2>
+
+    <p>
+        Cuando el usuario solicite mediante soporte la eliminación de información
+        específica, ConsultiPY podrá informarle qué datos serán eliminados y solicitar
+        una confirmación.
+    </p>
+
+    <p>
+        El usuario dispondrá de un plazo de hasta <strong>48 horas</strong> para
+        confirmar o retractarse de la solicitud, según corresponda.
+    </p>
+
+    <p>
+        Si la solicitud original identifica expresamente los datos que el usuario
+        desea eliminar y no se recibe una retractación dentro del plazo indicado,
+        soporte podrá proceder con la eliminación de esos datos solicitados.
+    </p>
+
+    <p>
+        Cuando el usuario solicite una revisión completa, soporte podrá comunicarle
+        qué datos o referencias relacionadas fueron localizados. El usuario dispondrá
+        de hasta <strong>48 horas</strong> para retractarse antes de que se proceda
+        con la eliminación informada.
+    </p>
+
+    <p class="importante">
+        El plazo de 48 horas no autoriza a ConsultiPY a eliminar información adicional
+        que el usuario no haya solicitado. Los datos ajenos al alcance de la solicitud
+        original se conservarán, salvo autorización o solicitud expresa del usuario.
+    </p>
+
+
+    <h2>Confirmación antes de eliminar</h2>
+
+    <p>
+        Antes de realizar una eliminación desde la aplicación, ConsultiPY mostrará
+        las opciones seleccionadas y solicitará una confirmación final.
+    </p>
+
+    <p class="importante">
+        El usuario deberá confirmar que comprende que la eliminación seleccionada
+        puede ser irreversible.
+    </p>
+
+    <p>
+        En el caso de los doctores, cuando una opción implique perder la autorización
+        profesional, esta consecuencia será indicada nuevamente antes de confirmar.
+    </p>
+
+
+    <h2>Eliminación completa</h2>
+
+    <p>
+        Al seleccionar <strong>ELIMINAR TODO</strong>, ConsultiPY marcará automáticamente
+        todas las opciones necesarias para eliminar la cuenta, su acceso y los datos
+        asociados que correspondan al usuario.
+    </p>
+
+    <p>
+        La eliminación se realizará en un orden destinado a evitar que queden datos
+        activos o vínculos incompletos durante el procedimiento.
+    </p>
+
+    <p>
+        El acceso a la cuenta será eliminado como parte final del proceso.
+    </p>
+
+
+    <h2>Eliminaciones incompletas o errores</h2>
+
+    <p>
+        Si se produce un error y alguna parte de una solicitud de eliminación no puede
+        completarse correctamente, ConsultiPY podrá generar una alerta para que el
+        equipo de soporte revise los elementos pendientes.
+    </p>
+
+    <p>
+        El usuario también puede comunicarse con soporte para solicitar una comprobación
+        adicional de que su eliminación fue realizada de forma íntegra.
+    </p>
+
+
+    <h2>Notificaciones y correos ya enviados</h2>
+
+    <p>
+        La eliminación de información almacenada en ConsultiPY no puede retirar
+        retroactivamente notificaciones que ya hayan sido entregadas al dispositivo
+        del usuario ni correos electrónicos que ya hayan sido enviados.
+    </p>
+
+
+    <h2>Registros de notificaciones profesionales</h2>
+
+    <p>
+        Cuando un profesional añade o modifica una observación destinada a un paciente,
+        ConsultiPY puede generar un registro técnico del evento con el objetivo de
+        gestionar notificaciones y comprobar su envío.
+    </p>
+
+    <p>
+        Este registro no necesita almacenar el contenido de la observación profesional.
+        Puede conservar únicamente la información necesaria para identificar que
+        se produjo el evento y a qué registro correspondía.
+    </p>
+
+    <p>
+        Estos registros podrán ser revisados y eliminados por la administración
+        de ConsultiPY conforme a los períodos de conservación establecidos.
+    </p>
+
+
+    <h2>Conservación temporal y copias de seguridad</h2>
+
+    <p>
+        ConsultiPY podrá mantener copias de seguridad temporales para recuperación
+        ante errores técnicos o eliminaciones accidentales.
+    </p>
+
+    <p>
+        El período máximo previsto de conservación histórica de estas copias será
+        de aproximadamente <strong>30 días</strong>.
+    </p>
+
+    <p>
+        Cuando una eliminación haya sido confirmada como definitiva, el sistema
+        utilizará mecanismos para impedir que una restauración de una copia anterior
+        reactive accidentalmente una cuenta o información que ya debía permanecer eliminada.
+    </p>
+
+    <p>
+        Una vez finalizado el período de conservación correspondiente, la información
+        eliminada dejará de formar parte de las copias históricas disponibles.
+    </p>
+
 
     <h2>Recuperación de datos eliminados</h2>
-    <p>En caso de eliminación accidental de una cuenta o registros, el usuario puede solicitar su recuperación dentro de un período máximo estimado de <strong>25 días</strong> desde la fecha de eliminación.</p>
-    <p>Para poder proceder con la restauración, el usuario debe:</p>
-    <ul>
-        <li>Contactar a soporte lo antes posible.</li>
-        <li>Proporcionar datos como: dirección de correo asociada a la cuenta, fecha aproximada de eliminación y detalles relevantes del contenido a recuperar.</li>
-    </ul>
-    <p>Una vez pasado ese período, los datos podrían quedar fuera del alcance de recuperación por políticas de retención del sistema. El usuario también puede solicitar la <strong>eliminación permanente e irreversible</strong> de todos sus datos, incluidos los almacenados temporalmente para recuperación.</p>
+
+    <p>
+        Si una eliminación fue accidental, el usuario puede comunicarse con soporte
+        lo antes posible para consultar si existe una copia temporal desde la cual
+        sea técnicamente posible recuperar la información.
+    </p>
+
+    <p>
+        La posibilidad de recuperación dependerá del tipo de eliminación realizada,
+        del tiempo transcurrido y de la disponibilidad de copias temporales.
+    </p>
+
+    <p>
+        Una eliminación solicitada como <strong>permanente e irreversible</strong>
+        puede impedir la recuperación incluso aunque existan copias históricas anteriores.
+    </p>
+
+
+    <h2>Solicitudes realizadas por correo</h2>
+
+    <p>
+        El usuario puede solicitar la eliminación de datos específicos o una revisión
+        completa escribiendo a
+        <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a>.
+    </p>
+
+    <p>
+        Cuando la solicitud sea específica, soporte informará qué información será
+        eliminada y aplicará el procedimiento de confirmación y el plazo de
+        <strong>48 horas</strong> descrito anteriormente.
+    </p>
+
+    <p>
+        Si durante una revisión se encuentran otros datos que no formaban parte
+        de la solicitud original, estos no serán eliminados automáticamente.
+    </p>
+
 
     <h2>Contacto de soporte</h2>
+
     <ul>
-        <li>Correo: <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/consultipy_app" target="_blank">https://www.instagram.com/consultipy_app</a></li>
-        <li>Sitio web: <a href="https://jazmincappo.github.io/consultipy/web/index.html" target="_blank">https://jazmincappo.github.io/consultipy/web/index.html</a></li>
-        <li>Desde la app: en <strong>Preguntas frecuentes → Sugerencias → Otros temas</strong>.</li>
+        <li>
+            Correo:
+            <a href="mailto:consultipy@gmail.com">consultipy@gmail.com</a>
+        </li>
+
+        <li>
+            Instagram:
+            <a href="https://www.instagram.com/consultipy_app" target="_blank">
+                https://www.instagram.com/consultipy_app
+            </a>
+        </li>
+
+        <li>
+            Sitio web:
+            <a href="https://jazmincappo.github.io/consultipy/web/index.html" target="_blank">
+                https://jazmincappo.github.io/consultipy/web/index.html
+            </a>
+        </li>
+
+        <li>
+            Desde la app:
+            <strong>Preguntas frecuentes → Sugerencias → Otros temas</strong>.
+        </li>
     </ul>
+
 </body>
 </html>
