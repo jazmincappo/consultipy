@@ -1,21 +1,13 @@
 # ConsultiPY
 
-```{=html}
 <p align="center">
-```
-`<strong>`{=html}Proyecto académico y aplicación Android orientada al
-bienestar, la organización personal y el acceso a recursos
-informativos.`</strong>`{=html}
-```{=html}
+  <strong>Proyecto académico y aplicación Android orientada al bienestar, la organización personal y el acceso a recursos informativos.</strong>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-Ingeniería Informática · Universidad Americana · Paraguay
-```{=html}
+  Ingeniería Informática · Universidad Americana · Paraguay 🇵🇾
 </p>
-```
+
 
 ------------------------------------------------------------------------
 
@@ -212,11 +204,9 @@ Paraguay 🇵🇾
 
 ------------------------------------------------------------------------
 
-```{=html}
+---
+
 <p align="center">
-```
-`<strong>`{=html}ConsultiPY`</strong>`{=html}`<br>`{=html} Aplicación
-Android · Proyecto académico · Recursos digitales
-```{=html}
+  <strong>ConsultiPY</strong><br>
+  Aplicación Android · Proyecto académico · Recursos digitales
 </p>
-```
